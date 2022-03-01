@@ -13,21 +13,22 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ou rapp'),
+        title: const Text('our app'),
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: const Center(
-        child: Text(
-          'hello ilias \nhello eleni',
-          style: TextStyle(
-            fontSize: 18.0,
-            fontWeight: FontWeight.bold,
-          ),
+      body: Center(
+        child: RaisedButton.icon(
+          onPressed: () {},
+          icon: Icon(Icons.mail),
+          label: Text('mail me'),
+          color: Colors.amber,
         ),
       ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: (null),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('you clicked');
+        },
         child: Text('click'),
         backgroundColor: Colors.red,
       ),
