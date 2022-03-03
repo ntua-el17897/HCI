@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,18 +19,30 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: RaisedButton.icon(
+      // ignore: prefer_const_constructors
+      body: Row(children: <Widget>[
+        // ignore: prefer_const_constructors
+        Text('hello worls'),
+        FlatButton(
           onPressed: () {},
-          icon: Icon(Icons.mail),
-          label: Text('mail me'),
+          // ignore: prefer_const_constructors
+          child: Text('hi chinld'),
           color: Colors.amber,
         ),
-      ),
+        Container(
+          color: Colors.cyan,
+          // ignore: prefer_const_constructors
+          padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+          // ignore: prefer_const_constructors
+          child: Text('this is whAt'),
+        )
+      ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          // ignore: avoid_print
           print('you clicked');
         },
+        // ignore: prefer_const_constructors
         child: Text('click'),
         backgroundColor: Colors.red,
       ),
