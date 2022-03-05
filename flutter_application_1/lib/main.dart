@@ -1,70 +1,33 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Home(),
-  ));
+  runApp(const MyApp());
 }
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('our app'),
-        centerTitle: true,
-        backgroundColor: Colors.red[600],
-      ),
-      // ignore: prefer_const_constructors
-      body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            // ignore: prefer_const_constructors
-
-            Expanded(
-              flex: 34,
-              child: Container(
-                color: Colors.cyan,
-                // ignore: prefer_const_constructors
-                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                // ignore: prefer_const_constructors
-                child: Text('this is  whAt'),
-              ),
+    return MaterialApp(
+      title: 'Welcome to Flutter',
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://images.unsplash.com/photo-1641451029786-9caca048d9af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"),
+                fit: BoxFit.fill),
+          ),
+          child: Container(
+            child: SizedBox.expand(
+              child: Image(image: AssetImage('../assets/cloudglasses.png')),
             ),
-            Expanded(
-              flex: 65,
-              child: Container(
-                color: Colors.orange,
-                // ignore: prefer_const_constructors
-                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                // ignore: prefer_const_constructors
-                child: Text('this is 2whAt'),
-              ),
-            ),
-            Expanded(
-              flex: 42,
-              child: Container(
-                color: Colors.green,
-                // ignore: prefer_const_constructors
-                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                // ignore: prefer_const_constructors
-                child: Text('this is 3whAt'),
-              ),
-            ),
-          ]),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // ignore: avoid_print
-          print('you clicked');
-        },
-        // ignore: prefer_const_constructors
-        child: Text('click'),
-        backgroundColor: Colors.red,
+          ),
+          padding: EdgeInsets.all(20),
+        ),
       ),
     );
   }
