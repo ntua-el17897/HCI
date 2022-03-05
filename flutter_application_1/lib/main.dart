@@ -20,23 +20,43 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       // ignore: prefer_const_constructors
-      body: Row(children: <Widget>[
-        // ignore: prefer_const_constructors
-        Text('hello worls'),
-        FlatButton(
-          onPressed: () {},
-          // ignore: prefer_const_constructors
-          child: Text('hi chinld'),
-          color: Colors.amber,
-        ),
-        Container(
-          color: Colors.cyan,
-          // ignore: prefer_const_constructors
-          padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-          // ignore: prefer_const_constructors
-          child: Text('this is whAt'),
-        )
-      ]),
+      body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            // ignore: prefer_const_constructors
+
+            Expanded(
+              flex: 34,
+              child: Container(
+                color: Colors.cyan,
+                // ignore: prefer_const_constructors
+                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                // ignore: prefer_const_constructors
+                child: Text('this is  whAt'),
+              ),
+            ),
+            Expanded(
+              flex: 65,
+              child: Container(
+                color: Colors.orange,
+                // ignore: prefer_const_constructors
+                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                // ignore: prefer_const_constructors
+                child: Text('this is 2whAt'),
+              ),
+            ),
+            Expanded(
+              flex: 42,
+              child: Container(
+                color: Colors.green,
+                // ignore: prefer_const_constructors
+                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                // ignore: prefer_const_constructors
+                child: Text('this is 3whAt'),
+              ),
+            ),
+          ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // ignore: avoid_print
