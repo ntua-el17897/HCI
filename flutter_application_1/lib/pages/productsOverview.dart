@@ -10,6 +10,8 @@ class ProductsOverview extends StatefulWidget {
 class _ProductsOverviewState extends State<ProductsOverview> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Text('products overview'),
+    );
   }
 }

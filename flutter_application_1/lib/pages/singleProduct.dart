@@ -10,6 +10,8 @@ class SingleProduct extends StatefulWidget {
 class _SingleProductState extends State<SingleProduct> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Text('single product'),
+    );
   }
 }

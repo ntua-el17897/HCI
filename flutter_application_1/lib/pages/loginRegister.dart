@@ -10,6 +10,8 @@ class LoginRegister extends StatefulWidget {
 class _LoginRegisterState extends State<LoginRegister> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Text('login register'),
+    );
   }
 }
