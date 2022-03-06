@@ -28,6 +28,28 @@ class MyApp extends StatelessWidget {
           ),
           padding: EdgeInsets.all(20),
         ),
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            FloatingActionButton.extended(
+              onPressed: () {
+                // Add your onPressed code here!
+              },
+              label: const Text('log in'),
+              icon: const Icon(Icons.login),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+            ),
+            FloatingActionButton.extended(
+              onPressed: () {
+                // Add your onPressed code here!
+              },
+              label: const Text('sign up'),
+              icon: const Icon(Icons.add),
+              backgroundColor: Color.fromARGB(255, 100, 100, 100),
+            ),
+          ],
+        ),
       ),
     );
   }
