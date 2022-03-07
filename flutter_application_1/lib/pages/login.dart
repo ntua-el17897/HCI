@@ -10,26 +10,62 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    "https://images.unsplash.com/photo-1641451029786-9caca048d9af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"),
-                fit: BoxFit.fill),
-          ),
-          child: Center(
-            child: Container(
-              child: const SizedBox.expand(
-                child: Text('hello login'),
+    return Scaffold(
+      body: const Padding(
+        padding: EdgeInsets.all(48.0),
+        child: Image(image: AssetImage('../assets/cloudglasses.png')),
+      ),
+      floatingActionButton: Center(child: newMethod()),
+    );
+  }
+
+  Column newMethod() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextFormField(
+            initialValue: 'Input text',
+            decoration: InputDecoration(
+              labelText: 'Label text',
+              errorText: 'Error message',
+              border: OutlineInputBorder(),
+              suffixIcon: Icon(
+                Icons.error,
               ),
             ),
           ),
-          padding: EdgeInsets.all(20),
         ),
-      ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextFormField(
+            initialValue: 'Input text',
+            decoration: InputDecoration(
+              labelText: 'Label text',
+              border: OutlineInputBorder(),
+              suffixIcon: Icon(
+                Icons.error,
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(38.0),
+          child: Builder(builder: (context) {
+            return FloatingActionButton.extended(
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+                // Add your onPressed code here!
+              },
+              label: const Text('log in'),
+              icon: const Icon(Icons.login),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+            );
+          }),
+        ),
+      ],
     );
   }
 }
