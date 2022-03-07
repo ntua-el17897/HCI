@@ -2,14 +2,14 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class CheckboxThing extends StatefulWidget {
+  const CheckboxThing({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<CheckboxThing> createState() => _CheckboxThingState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _CheckboxThingState extends State<CheckboxThing> {
   bool isChecked = false;
 
   @override
@@ -103,7 +103,7 @@ class _RegisterState extends State<Register> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Remember my password"),
-            MyStatefulWidget(),
+            CheckboxThing(),
           ],
         ),
         Padding(

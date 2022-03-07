@@ -14,19 +14,19 @@ class _ProductsOverviewState extends State<ProductsOverview> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: _title,
-      home: MyStatefulWidget(),
+      home: NavbarThing(),
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class NavbarThing extends StatefulWidget {
+  const NavbarThing({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<NavbarThing> createState() => _NavbarThingState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _NavbarThingState extends State<NavbarThing> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);

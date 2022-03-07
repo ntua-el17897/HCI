@@ -66,7 +66,7 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Remember my password"),
-            MyStatefulWidget(),
+            CheckboxThing(),
           ],
         ),
         Padding(
