@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text("Remember my password"),
             CheckboxThing(),
           ],

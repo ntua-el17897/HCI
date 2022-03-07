@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/productsOverview.dart';
 
 class SingleProduct extends StatefulWidget {
   @override
@@ -10,8 +11,8 @@ class SingleProduct extends StatefulWidget {
 class _SingleProductState extends State<SingleProduct> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text('single product'),
+    return const MaterialApp(
+      home: NavbarThing(),
     );
   }
 }
