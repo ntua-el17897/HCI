@@ -52,26 +52,40 @@ class MyApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Builder(builder: (context) {
-              return FloatingActionButton.extended(
+              //   return FloatingActionButton.extended(
+              //     onPressed: () {
+              //       Navigator.pushNamed(context, '/login');
+              //       // Add your onPressed code here!
+              //     },
+              // label: const Text('log in'),
+              // icon: const Icon(Icons.login),
+              // backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              //   );
+              return ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/login');
-                  // Add your onPressed code here!
+                  // Respond to button press
                 },
-                label: const Text('log in'),
-                icon: const Icon(Icons.login),
-                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                child: Text('LOG IN'),
               );
             }),
             Builder(builder: (context) {
-              return FloatingActionButton.extended(
+              return ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/register');
-                  // Add your onPressed code here!
+                  // Respond to button press
                 },
-                label: const Text('sign up'),
-                icon: const Icon(Icons.add),
-                backgroundColor: Color.fromARGB(255, 100, 100, 100),
+                child: Text('SIGN UP'),
               );
+              // return FloatingActionButton.extended(
+              //   onPressed: () {
+              //     Navigator.pushNamed(context, '/register');
+              //     // Add your onPressed code here!
+              //   },
+              //   label: const Text('sign up'),
+              //   icon: const Icon(Icons.add),
+              //   backgroundColor: Color.fromARGB(255, 100, 100, 100),
+              // );
             }),
           ],
         ),
