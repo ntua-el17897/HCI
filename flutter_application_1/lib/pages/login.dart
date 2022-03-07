@@ -24,30 +24,41 @@ class _LoginState extends State<Login> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: TextFormField(
-            initialValue: 'Input text',
-            decoration: InputDecoration(
-              labelText: 'Label text',
-              errorText: 'Error message',
-              border: OutlineInputBorder(),
-              suffixIcon: Icon(
-                Icons.error,
-              ),
+        TextFormField(
+          cursorColor: Theme.of(context).cursorColor,
+          initialValue: 'Input text',
+          maxLength: 20,
+          decoration: const InputDecoration(
+            icon: Icon(Icons.favorite),
+            labelText: 'Label text',
+            labelStyle: TextStyle(
+              color: Color(0xFF6200EE),
+            ),
+            helperText: 'Helper text',
+            suffixIcon: Icon(
+              Icons.check_circle,
+            ),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: TextFormField(
-            initialValue: 'Input text',
-            decoration: InputDecoration(
-              labelText: 'Label text',
-              border: OutlineInputBorder(),
-              suffixIcon: Icon(
-                Icons.error,
-              ),
+        TextFormField(
+          cursorColor: Theme.of(context).cursorColor,
+          initialValue: 'Input text',
+          maxLength: 20,
+          decoration: const InputDecoration(
+            icon: Icon(Icons.favorite),
+            labelText: 'Label text',
+            labelStyle: TextStyle(
+              color: Color(0xFF6200EE),
+            ),
+            helperText: 'Helper text',
+            suffixIcon: Icon(
+              Icons.check_circle,
+            ),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
         ),
