@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/cameraScreen.dart';
 import 'package:flutter_application_1/pages/cart.dart';
-import 'package:flutter_application_1/pages/loginRegister.dart';
 import 'package:flutter_application_1/pages/login.dart';
 import 'package:flutter_application_1/pages/checkout.dart';
 import 'package:flutter_application_1/pages/register.dart';
@@ -23,7 +22,6 @@ class MyApp extends StatelessWidget {
       title: 'Welcome to Flutter',
       //initialRoute: '/loginRegister',
       routes: {
-        '/loginRegister': (context) => LoginRegister(),
         '/cart': (context) => Cart(),
         '/cameraScreen': (context) => CameraScreen(),
         '/checkout': (context) => Checkout(),

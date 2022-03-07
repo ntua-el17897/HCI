@@ -67,7 +67,7 @@ class _RegisterState extends State<Register> {
           child: Builder(builder: (context) {
             return FloatingActionButton.extended(
               onPressed: () {
-                Navigator.pushNamed(context, '/Register');
+                Navigator.pushNamed(context, '/productsOverview');
                 // Add your onPressed code here!
               },
               label: const Text('sign up'),
