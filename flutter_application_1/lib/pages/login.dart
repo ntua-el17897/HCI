@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(38.0),
+          padding: const EdgeInsets.all(48.0),
           child: Builder(builder: (context) {
             var size2 = 18;
             return ElevatedButton(
