@@ -99,7 +99,13 @@ class _RegisterState extends State<Register> {
             ),
           ),
         ),
-        MyStatefulWidget(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Remember my password"),
+            MyStatefulWidget(),
+          ],
+        ),
         Padding(
           padding: const EdgeInsets.all(38.0),
           child: Builder(builder: (context) {

@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/register.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -58,6 +59,13 @@ class _LoginState extends State<Login> {
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Remember my password"),
+            MyStatefulWidget(),
+          ],
         ),
         Padding(
           padding: const EdgeInsets.all(38.0),
