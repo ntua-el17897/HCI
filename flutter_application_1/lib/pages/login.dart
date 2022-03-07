@@ -67,7 +67,7 @@ class _LoginState extends State<Login> {
           child: Builder(builder: (context) {
             return FloatingActionButton.extended(
               onPressed: () {
-                Navigator.pushNamed(context, '/login');
+                Navigator.pushNamed(context, '/productsOverview');
                 // Add your onPressed code here!
               },
               label: const Text('log in'),
