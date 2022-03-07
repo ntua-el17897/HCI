@@ -30,15 +30,12 @@ class _LoginState extends State<Login> {
           maxLength: 20,
           decoration: const InputDecoration(
             icon: Icon(Icons.favorite),
-            labelText: 'Label text',
+            labelText: 'Username',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            helperText: 'Helper text',
-            suffixIcon: Icon(
-              Icons.check_circle,
-            ),
-            enabledBorder: UnderlineInputBorder(
+            suffixIcon: Icon(Icons.remove_red_eye_outlined),
+            enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
@@ -57,7 +54,7 @@ class _LoginState extends State<Login> {
             suffixIcon: Icon(
               Icons.check_circle,
             ),
-            enabledBorder: UnderlineInputBorder(
+            enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
