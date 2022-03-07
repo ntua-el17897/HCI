@@ -51,22 +51,28 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            FloatingActionButton.extended(
-              onPressed: () {
-                // Add your onPressed code here!
-              },
-              label: const Text('log in'),
-              icon: const Icon(Icons.login),
-              backgroundColor: Color.fromARGB(255, 0, 0, 0),
-            ),
-            FloatingActionButton.extended(
-              onPressed: () {
-                // Add your onPressed code here!
-              },
-              label: const Text('sign up'),
-              icon: const Icon(Icons.add),
-              backgroundColor: Color.fromARGB(255, 100, 100, 100),
-            ),
+            Builder(builder: (context) {
+              return FloatingActionButton.extended(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                  // Add your onPressed code here!
+                },
+                label: const Text('log in'),
+                icon: const Icon(Icons.login),
+                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              );
+            }),
+            Builder(builder: (context) {
+              return FloatingActionButton.extended(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/register');
+                  // Add your onPressed code here!
+                },
+                label: const Text('sign up'),
+                icon: const Icon(Icons.add),
+                backgroundColor: Color.fromARGB(255, 100, 100, 100),
+              );
+            }),
           ],
         ),
       ),
