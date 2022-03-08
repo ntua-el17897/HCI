@@ -2,8 +2,6 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-<<<<<<< Updated upstream
-=======
 class CheckboxThing extends StatefulWidget {
   const CheckboxThing({Key? key}) : super(key: key);
 
@@ -41,7 +39,6 @@ class _CheckboxThingState extends State<CheckboxThing> {
   }
 }
 
->>>>>>> Stashed changes
 class Register extends StatefulWidget {
   @override
   _RegisterState createState() => _RegisterState();
@@ -100,6 +97,15 @@ class _RegisterState extends State<Register> {
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
+          ),
+        ),
+        Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text("Remember my password"),
+              CheckboxThing(),
+            ],
           ),
         ),
         Padding(
