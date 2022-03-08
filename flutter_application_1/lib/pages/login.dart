@@ -26,8 +26,6 @@ class _LoginState extends State<Login> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         TextFormField(
-          // cursorColor: Theme.of(context).cursorColor,
-          // initialValue: 'Input text',
           maxLength: 20,
           decoration: const InputDecoration(
             icon: Icon(null),
@@ -44,8 +42,6 @@ class _LoginState extends State<Login> {
           ),
         ),
         TextFormField(
-          cursorColor: Theme.of(context).cursorColor,
-          // initialValue: 'Input text',
           maxLength: 20,
           decoration: const InputDecoration(
             icon: Icon(null),
@@ -63,7 +59,7 @@ class _LoginState extends State<Login> {
           ),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text("Remember my password"),
             CheckboxThing(),
