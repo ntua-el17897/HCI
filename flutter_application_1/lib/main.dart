@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
       //initialRoute: '/loginRegister',
       routes: {
         '/cart': (context) => Cart(),
-        '/cameraScreen': (context) => CameraScreen(),
+        '/camerascreen': (context) => CameraScreen(),
         '/checkout': (context) => Checkout(),
         '/login': (context) => Login(),
         '/register': (context) => Register(),
-        '/productsOverview': (context) => ProductsOverview(),
+        '/productsoverview': (context) => ProductsOverview(),
         '/singleproduct': (context) => SingleProduct(),
       },
       home: Scaffold(
