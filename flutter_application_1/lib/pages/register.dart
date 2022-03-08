@@ -101,23 +101,27 @@ class _RegisterState extends State<Register> {
             CheckboxThing(),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.all(38.0),
-          child: Builder(builder: (context) {
-            return ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/productsOverview');
-                // Add your onPressed code here!
-              },
-              child: const Text('SIGN UP'),
-              // label: const Text('log in'),
-              // icon: Icon(Icons.login_sharp,
-              //     color: Color(0xFF6200EE), size: size2),
-              style: ElevatedButton.styleFrom(primary: const Color(0xFF6200EE)),
-            );
-          }),
-        ),
+        sign_up_method(),
       ],
+    );
+  }
+
+  Padding sign_up_method() {
+    return Padding(
+      padding: const EdgeInsets.all(38.0),
+      child: Builder(builder: (context) {
+        return ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/productsOverview');
+            // Add your onPressed code here!
+          },
+          child: const Text('SIGN UP'),
+          // label: const Text('log in'),
+          // icon: Icon(Icons.login_sharp,
+          //     color: Color(0xFF6200EE), size: size2),
+          style: ElevatedButton.styleFrom(primary: const Color(0xFF6200EE)),
+        );
+      }),
     );
   }
 }
