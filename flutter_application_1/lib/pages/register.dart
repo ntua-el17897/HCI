@@ -2,8 +2,6 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-<<<<<<< Updated upstream
-=======
 class CheckboxThing extends StatefulWidget {
   const CheckboxThing({Key? key}) : super(key: key);
 
@@ -41,7 +39,6 @@ class _CheckboxThingState extends State<CheckboxThing> {
   }
 }
 
->>>>>>> Stashed changes
 class Register extends StatefulWidget {
   @override
   _RegisterState createState() => _RegisterState();
@@ -65,54 +62,58 @@ class _RegisterState extends State<Register> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         TextFormField(
-          cursorColor: Theme.of(context).cursorColor,
-          initialValue: 'Input text',
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(Icons.favorite),
-            labelText: 'Label text',
+            icon: Icon(null),
+            labelText: 'Username',
             labelStyle: TextStyle(
-              color: Color(0xFF6200EE),
+              color: Colors.deepPurpleAccent,
             ),
-            helperText: 'Helper text',
-            suffixIcon: Icon(
-              Icons.check_circle,
-            ),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFF6200EE)),
+            // suffixIcon: Icon(Icons.remove_red_eye_sharp),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurpleAccent),
             ),
           ),
         ),
         TextFormField(
-          cursorColor: Theme.of(context).cursorColor,
-          initialValue: 'Input text',
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(Icons.favorite),
-            labelText: 'Label text',
+            icon: Icon(null),
+            labelText: 'Password',
             labelStyle: TextStyle(
-              color: Color(0xFF6200EE),
+              color: Colors.deepPurpleAccent,
             ),
-            helperText: 'Helper text',
-            suffixIcon: Icon(
-              Icons.check_circle,
-            ),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFF6200EE)),
+            // helperText: 'Helper text',
+            suffixIcon: Icon(Icons.remove_red_eye_outlined),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurpleAccent),
             ),
           ),
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Remember my password"),
+            CheckboxThing(),
+          ],
+        ),
         Padding(
-          padding: const EdgeInsets.all(38.0),
+          padding: const EdgeInsets.all(48.0),
           child: Builder(builder: (context) {
-            return FloatingActionButton.extended(
+            return ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/productsOverview');
+                Navigator.pushNamed(context, '/productsoverview');
                 // Add your onPressed code here!
               },
-              label: const Text('sign up'),
-              icon: const Icon(Icons.add),
-              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              child: const Text('SIGN UP'),
+              // label: const Text('log in'),
+              // icon: Icon(Icons.login_sharp,
+              //     color: Colors.deepPurpleAccent, size: size2),
+              style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
             );
           }),
         ),

@@ -31,13 +31,13 @@ class _LoginState extends State<Login> {
             icon: Icon(null),
             labelText: 'Username',
             labelStyle: TextStyle(
-              color: Color(0xFF6200EE),
+              color: Colors.deepPurpleAccent,
             ),
             // suffixIcon: Icon(Icons.remove_red_eye_sharp),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE))),
+                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFF6200EE)),
+              borderSide: BorderSide(color: Colors.deepPurpleAccent),
             ),
           ),
         ),
@@ -47,19 +47,19 @@ class _LoginState extends State<Login> {
             icon: Icon(null),
             labelText: 'Password',
             labelStyle: TextStyle(
-              color: Color(0xFF6200EE),
+              color: Colors.deepPurpleAccent,
             ),
             // helperText: 'Helper text',
             suffixIcon: Icon(Icons.remove_red_eye_outlined),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE))),
+                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFF6200EE)),
+              borderSide: BorderSide(color: Colors.deepPurpleAccent),
             ),
           ),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Remember my password"),
             CheckboxThing(),
@@ -68,17 +68,17 @@ class _LoginState extends State<Login> {
         Padding(
           padding: const EdgeInsets.all(48.0),
           child: Builder(builder: (context) {
-            var size2 = 18;
+            // var size2 = 18;
             return ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/productsOverview');
+                Navigator.pushNamed(context, '/productsoverview');
                 // Add your onPressed code here!
               },
               child: const Text('LOG IN'),
               // label: const Text('log in'),
               // icon: Icon(Icons.login_sharp,
-              //     color: Color(0xFF6200EE), size: size2),
-              style: ElevatedButton.styleFrom(primary: const Color(0xFF6200EE)),
+              //     color: Colors.deepPurpleAccent, size: size2),
+              style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
             );
           }),
         ),

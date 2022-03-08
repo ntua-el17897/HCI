@@ -65,6 +65,8 @@ class MyApp extends StatelessWidget {
                   // Respond to button press
                 },
                 child: Text('LOG IN'),
+                style:
+                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
               );
             }),
             Builder(builder: (context) {
@@ -74,6 +76,8 @@ class MyApp extends StatelessWidget {
                   // Respond to button press
                 },
                 child: Text('SIGN UP'),
+                style:
+                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
               );
               // return FloatingActionButton.extended(
               //   onPressed: () {
