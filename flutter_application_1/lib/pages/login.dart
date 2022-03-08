@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/register.dart';
 
 class Login extends StatefulWidget {
   @override
