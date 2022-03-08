@@ -2,43 +2,6 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-class CheckboxThing extends StatefulWidget {
-  const CheckboxThing({Key? key}) : super(key: key);
-
-  @override
-  State<CheckboxThing> createState() => _CheckboxThingState();
-}
-
-class _CheckboxThingState extends State<CheckboxThing> {
-  bool isChecked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
-      }
-      return Colors.red;
-    }
-
-    return Checkbox(
-      checkColor: Colors.white,
-      fillColor: MaterialStateProperty.resolveWith(getColor),
-      value: isChecked,
-      onChanged: (bool? value) {
-        setState(() {
-          isChecked = value!;
-        });
-      },
-    );
-  }
-}
-
 class Register extends StatefulWidget {
   @override
   _RegisterState createState() => _RegisterState();
@@ -62,66 +25,58 @@ class _RegisterState extends State<Register> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         TextFormField(
+          cursorColor: Theme.of(context).cursorColor,
+          initialValue: 'Input text',
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Username',
+            icon: Icon(Icons.favorite),
+            labelText: 'Label text',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            // suffixIcon: Icon(Icons.remove_red_eye_sharp),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE))),
-            enabledBorder: OutlineInputBorder(
+            helperText: 'Helper text',
+            suffixIcon: Icon(
+              Icons.check_circle,
+            ),
+            enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
         ),
         TextFormField(
+          cursorColor: Theme.of(context).cursorColor,
+          initialValue: 'Input text',
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Password',
+            icon: Icon(Icons.favorite),
+            labelText: 'Label text',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            // helperText: 'Helper text',
-            suffixIcon: Icon(Icons.remove_red_eye_outlined),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE))),
-            enabledBorder: OutlineInputBorder(
+            helperText: 'Helper text',
+            suffixIcon: Icon(
+              Icons.check_circle,
+            ),
+            enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Remember my password"),
-            CheckboxThing(),
-          ],
+        Padding(
+          padding: const EdgeInsets.all(38.0),
+          child: Builder(builder: (context) {
+            return FloatingActionButton.extended(
+              onPressed: () {
+                Navigator.pushNamed(context, '/productsOverview');
+                // Add your onPressed code here!
+              },
+              label: const Text('sign up'),
+              icon: const Icon(Icons.add),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+            );
+          }),
         ),
-        sign_up_method(),
       ],
-    );
-  }
-
-  Padding sign_up_method() {
-    return Padding(
-      padding: const EdgeInsets.all(38.0),
-      child: Builder(builder: (context) {
-        return ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/productsOverview');
-            // Add your onPressed code here!
-          },
-          child: const Text('SIGN UP'),
-          // label: const Text('log in'),
-          // icon: Icon(Icons.login_sharp,
-          //     color: Color(0xFF6200EE), size: size2),
-          style: ElevatedButton.styleFrom(primary: const Color(0xFF6200EE)),
-        );
-      }),
     );
   }
 }
