@@ -2,6 +2,46 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
+<<<<<<< Updated upstream
+=======
+class CheckboxThing extends StatefulWidget {
+  const CheckboxThing({Key? key}) : super(key: key);
+
+  @override
+  State<CheckboxThing> createState() => _CheckboxThingState();
+}
+
+class _CheckboxThingState extends State<CheckboxThing> {
+  bool isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return Colors.deepPurpleAccent;
+      }
+      return Colors.deepPurpleAccent;
+    }
+
+    return Checkbox(
+      checkColor: Colors.white,
+      fillColor: MaterialStateProperty.resolveWith(getColor),
+      value: isChecked,
+      onChanged: (bool? value) {
+        setState(() {
+          isChecked = value!;
+        });
+      },
+    );
+  }
+}
+
+>>>>>>> Stashed changes
 class Register extends StatefulWidget {
   @override
   _RegisterState createState() => _RegisterState();
