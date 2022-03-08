@@ -23,21 +23,20 @@ class _LoginState extends State<Login> {
   Column newMethod() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         TextFormField(
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(Icons.favorite),
-            labelText: 'Label text',
+            icon: Icon(null),
+            labelText: 'Username',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            helperText: 'Helper text',
-            suffixIcon: Icon(
-              Icons.check_circle,
-            ),
-            enabledBorder: UnderlineInputBorder(
+            // suffixIcon: Icon(Icons.remove_red_eye_sharp),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFF6200EE))),
+            enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
@@ -45,16 +44,16 @@ class _LoginState extends State<Login> {
         TextFormField(
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(Icons.favorite),
-            labelText: 'Label text',
+            icon: Icon(null),
+            labelText: 'Password',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            helperText: 'Helper text',
-            suffixIcon: Icon(
-              Icons.check_circle,
-            ),
-            enabledBorder: UnderlineInputBorder(
+            // helperText: 'Helper text',
+            suffixIcon: Icon(Icons.remove_red_eye_outlined),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFF6200EE))),
+            enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
@@ -67,16 +66,19 @@ class _LoginState extends State<Login> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.all(38.0),
+          padding: const EdgeInsets.all(48.0),
           child: Builder(builder: (context) {
-            return FloatingActionButton.extended(
+            var size2 = 18;
+            return ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/productsOverview');
                 // Add your onPressed code here!
               },
-              label: const Text('log in'),
-              icon: const Icon(Icons.login),
-              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              child: const Text('LOG IN'),
+              // label: const Text('log in'),
+              // icon: Icon(Icons.login_sharp,
+              //     color: Color(0xFF6200EE), size: size2),
+              style: ElevatedButton.styleFrom(primary: const Color(0xFF6200EE)),
             );
           }),
         ),
