@@ -1,7 +1,6 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/register.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -23,20 +22,21 @@ class _LoginState extends State<Login> {
   Column newMethod() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         TextFormField(
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Username',
+            icon: Icon(Icons.favorite),
+            labelText: 'Label text',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            // suffixIcon: Icon(Icons.remove_red_eye_sharp),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE))),
-            enabledBorder: OutlineInputBorder(
+            helperText: 'Helper text',
+            suffixIcon: Icon(
+              Icons.check_circle,
+            ),
+            enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
@@ -44,16 +44,16 @@ class _LoginState extends State<Login> {
         TextFormField(
           maxLength: 20,
           decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Password',
+            icon: Icon(Icons.favorite),
+            labelText: 'Label text',
             labelStyle: TextStyle(
               color: Color(0xFF6200EE),
             ),
-            // helperText: 'Helper text',
-            suffixIcon: Icon(Icons.remove_red_eye_outlined),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF6200EE))),
-            enabledBorder: OutlineInputBorder(
+            helperText: 'Helper text',
+            suffixIcon: Icon(
+              Icons.check_circle,
+            ),
+            enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Color(0xFF6200EE)),
             ),
           ),
@@ -66,19 +66,16 @@ class _LoginState extends State<Login> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.all(48.0),
+          padding: const EdgeInsets.all(38.0),
           child: Builder(builder: (context) {
-            var size2 = 18;
-            return ElevatedButton(
+            return FloatingActionButton.extended(
               onPressed: () {
                 Navigator.pushNamed(context, '/productsOverview');
                 // Add your onPressed code here!
               },
-              child: const Text('LOG IN'),
-              // label: const Text('log in'),
-              // icon: Icon(Icons.login_sharp,
-              //     color: Color(0xFF6200EE), size: size2),
-              style: ElevatedButton.styleFrom(primary: const Color(0xFF6200EE)),
+              label: const Text('log in'),
+              icon: const Icon(Icons.login),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
             );
           }),
         ),
