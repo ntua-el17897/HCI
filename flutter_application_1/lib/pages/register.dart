@@ -100,6 +100,23 @@ class _RegisterState extends State<Register> {
             ),
           ),
         ),
+      TextFormField(
+          maxLength: 20,
+          decoration: const InputDecoration(
+            icon: Icon(null),
+            labelText: 'Repeat your Password',
+            labelStyle: TextStyle(
+              color: Colors.deepPurpleAccent,
+            ),
+            // helperText: 'Helper text',
+            suffixIcon: Icon(Icons.remove_red_eye_outlined),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurpleAccent),
+            ),
+          ),
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
