@@ -100,7 +100,7 @@ class _RegisterState extends State<Register> {
             ),
           ),
         ),
-      TextFormField(
+        TextFormField(
           maxLength: 20,
           decoration: const InputDecoration(
             icon: Icon(null),
