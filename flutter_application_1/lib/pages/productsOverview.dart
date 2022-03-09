@@ -54,14 +54,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('BottomNavigationBar Sample'),
+      // ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.deepPurpleAccent,
         items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.menu_rounded),
+            label: 'Menu',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -70,13 +75,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Icon(Icons.shopping_cart),
             label: 'Cart',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_rounded),
-            label: 'Menu',
-          ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.deepPurpleAccent,
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );
