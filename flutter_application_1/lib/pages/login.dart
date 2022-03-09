@@ -12,19 +12,23 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Padding(
-        padding: EdgeInsets.all(18.0),
-        child: Image(image: AssetImage('../assets/cloudglasses.png')),
+      body:  Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Align(
+          alignment: Alignment(0.20, -0.95),
+          child: Image(image: AssetImage('../assets/cloudglasses.png')),
+        ),
       ),
       floatingActionButton:
-          Align(alignment: Alignment.bottomCenter, child: newMethod()),
+          Align(alignment: Alignment(0.5, -0.4), child: newMethod()),
     );
   }
 
-  Column newMethod() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
+  
+  Wrap newMethod() {
+    return Wrap(
+      spacing: 8.0,
+      runSpacing: 4.0,
       children: [
         TextFormField(
           maxLength: 20,
@@ -66,8 +70,7 @@ class _LoginState extends State<Login> {
             CheckboxThing(),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.all(48.0),
+        Center(
           child: Builder(builder: (context) {
             // var size2 = 18;
             return ElevatedButton(
