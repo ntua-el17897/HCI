@@ -13,10 +13,11 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: const Padding(
-        padding: EdgeInsets.all(48.0),
+        padding: EdgeInsets.all(18.0),
         child: Image(image: AssetImage('../assets/cloudglasses.png')),
       ),
-      floatingActionButton: Center(child: newMethod()),
+      floatingActionButton:
+          Align(alignment: Alignment.bottomCenter, child: newMethod()),
     );
   }
 

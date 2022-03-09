@@ -48,18 +48,24 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Padding(
-        padding: EdgeInsets.all(48.0),
-        child: Image(image: AssetImage('../assets/cloudglasses.png')),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Align(
+          alignment: Alignment(0.20, -0.95),
+          child: Image(image: AssetImage('../assets/cloudglasses.png')),
+        ),
       ),
-      floatingActionButton: Center(child: newMethod()),
+      floatingActionButton:
+          Align(alignment: Alignment(0.5, -0.4), child: newMethod()),
     );
   }
 
-  Column newMethod() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+  Wrap newMethod() {
+    return Wrap(
+      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      spacing: 8.0,
+      runSpacing: 4.0,
       children: [
         TextFormField(
           maxLength: 20,
@@ -101,8 +107,8 @@ class _RegisterState extends State<Register> {
             CheckboxThing(),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.all(48.0),
+        Center(
+          // padding: const EdgeInsets.all(48.0),
           child: Builder(builder: (context) {
             return ElevatedButton(
               onPressed: () {
