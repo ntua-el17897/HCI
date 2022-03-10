@@ -25,7 +25,7 @@ class _ProductsOverviewState extends State<ProductsOverview> {
 }
 
 class _MyNavBarWidgetState extends State<MyNavBarWidget> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -144,13 +144,6 @@ class MyMenuWidget extends StatefulWidget {
   @override
   State<MyMenuWidget> createState() => _MyMenuWidgetState();
 }
-
-// class MyHomeWidget extends StatefulWidget {
-//   const MyHomeWidget({Key? key}) : super(key: key);
-
-//   @override
-//   State<MyHomeWidget> createState() => _MyHomeWidgetState();
-// }
 
 class ProductsOverview extends StatefulWidget {
   @override
