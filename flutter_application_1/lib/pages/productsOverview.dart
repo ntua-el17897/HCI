@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -80,7 +82,7 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const <Widget>[
+      children: <Widget>[
         Card(
           child: ListTile(
             leading: Image(image: AssetImage('../assets/face.jpg')),
@@ -100,7 +102,9 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               "Home",
               style: TextStyle(fontSize: 18.0),
             ),
-            //onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/productsoverview');
+            },
           ),
         ),
         Card(
@@ -113,7 +117,9 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               "Cart",
               style: TextStyle(fontSize: 18.0),
             ),
-            //onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/cart');
+            },
           ),
         ),
         Card(
@@ -126,7 +132,6 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               "Wishlist",
               style: TextStyle(fontSize: 18.0),
             ),
-            //onTap: () {},
           ),
         ),
         Card(
@@ -139,7 +144,9 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               "AR Simulation",
               style: TextStyle(fontSize: 18.0),
             ),
-            //onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/camerascreen');
+            },
           ),
         ),
         Card(
@@ -152,7 +159,9 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               "Logout",
               style: TextStyle(fontSize: 18.0),
             ),
-            //onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/login');
+            },
           ),
         ),
       ],
