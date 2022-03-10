@@ -12,7 +12,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  Padding(
+      body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Align(
           alignment: Alignment(0.20, -0.95),
@@ -24,7 +24,6 @@ class _LoginState extends State<Login> {
     );
   }
 
-  
   Wrap newMethod() {
     return Wrap(
       spacing: 8.0,
