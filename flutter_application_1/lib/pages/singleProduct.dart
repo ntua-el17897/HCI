@@ -14,10 +14,13 @@ class _SingleProductState extends State<SingleProduct> {
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
-            const Align(
-              alignment: Alignment(0.0, -0.0),
-              child: Image(image: AssetImage('../assets/single_product.png')),
-            ),
+            Stack(children: const [
+              Image(image: AssetImage('../assets/glass1.jpg')),
+              Padding(
+                  padding: EdgeInsets.all(50),
+                  child: Image(image: AssetImage('../assets/cloudglasses.png')))
+            ]),
+
             titleSection,
             buttonSection,
             //buttonSection2,
