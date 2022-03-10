@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
+import 'package:english_words/english_words.dart';
 import 'cart.dart';
 
 class _ProductsOverviewState extends State<ProductsOverview> {
@@ -131,62 +132,92 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
 }
 
 class _MyMenuWidgetState extends State<MyMenuWidget> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: menu',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1:menumenu',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1:menu menu',
-      style: optionStyle,
-    )
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
+  final _suggestions = ["user", "banana", "three", "four"];
+  final _biggerFont = const TextStyle(fontSize: 18.0);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('BottomNavigationBar Sample'),
-      // ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepPurpleAccent,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_rounded),
-            label: 'Menu',
+    return ListView(
+      children: const <Widget>[
+        Card(
+          child: ListTile(
+            leading: Image(image: AssetImage('../assets/face.jpg')),
+            title: Text('User Useropoulos'),
+            subtitle: Text('snailman@emailperson.com'),
+            isThreeLine: true,
+            contentPadding: EdgeInsets.fromLTRB(1, 80, 1, 1),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+        ),
+        Card(
+          child: ListTile(
+            leading: Icon(
+              Icons.home,
+              color: Colors.grey,
+            ),
+            title: Text(
+              "Home",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            //onTap: () {},
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
+        ),
+        Card(
+          child: ListTile(
+            leading: Icon(
+              Icons.shopping_cart,
+              color: Colors.grey,
+            ),
+            title: Text(
+              "Cart",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            //onTap: () {},
           ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
-        onTap: _onItemTapped,
-      ),
+        ),
+        Card(
+          child: ListTile(
+            leading: Icon(
+              Icons.favorite,
+              color: Colors.grey,
+            ),
+            title: Text(
+              "Wishlist",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            //onTap: () {},
+          ),
+        ),
+        Card(
+          child: ListTile(
+            leading: Icon(
+              Icons.camera,
+              color: Colors.grey,
+            ),
+            title: Text(
+              "AR Simulation",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            //onTap: () {},
+          ),
+        ),
+        Card(
+          child: ListTile(
+            leading: Icon(
+              Icons.logout,
+              color: Colors.grey,
+            ),
+            title: Text(
+              "Logout",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            //onTap: () {},
+          ),
+        ),
+      ],
     );
   }
 }
+
+// #enddocregion RWS-var
 
 class MyNavBarWidget extends StatefulWidget {
   const MyNavBarWidget({Key? key}) : super(key: key);
