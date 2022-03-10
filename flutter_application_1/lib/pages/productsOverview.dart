@@ -1,6 +1,9 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/register.dart';
+
+import 'cart.dart';
 
 class ProductsOverview extends StatefulWidget {
   @override
@@ -12,37 +15,41 @@ class _ProductsOverviewState extends State<ProductsOverview> {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    // ignore: prefer_const_constructors
+    return MaterialApp(
       title: _title,
-      home: MyStatefulWidget(),
+      // ignore: prefer_const_constructors
+      home: Builder(builder: (context) {
+        return const MaterialApp(
+          title: 'Startup Name Generator',
+          home: MyNavBarWidget(),
+        );
+      }),
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class MyNavBarWidget extends StatefulWidget {
+  const MyNavBarWidget({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<MyNavBarWidget> createState() => _MyNavBarWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _MyNavBarWidgetState extends State<MyNavBarWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Index 0: Menu',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Cart',
+      'Index 1: Home',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    MyNavBarWidget()
   ];
 
   void _onItemTapped(int index) {

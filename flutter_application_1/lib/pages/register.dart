@@ -56,91 +56,92 @@ class _RegisterState extends State<Register> {
         ),
       ),
       floatingActionButton:
-          Align(alignment: Alignment(0.5, -0.4), child: newMethod()),
+          Align(alignment: Alignment(0.5, -0.4), child: RegisterMain()),
     );
   }
+}
 
-  Wrap newMethod() {
-    return Wrap(
-      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      // crossAxisAlignment: CrossAxisAlignment.center,
-      spacing: 8.0,
-      runSpacing: 4.0,
-      children: [
-        TextFormField(
-          maxLength: 20,
-          decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Username',
-            labelStyle: TextStyle(
-              color: Colors.deepPurpleAccent,
-            ),
-            // suffixIcon: Icon(Icons.remove_red_eye_sharp),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.deepPurpleAccent),
-            ),
+// ignore: non_constant_identifier_names
+Wrap RegisterMain() {
+  return Wrap(
+    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    // crossAxisAlignment: CrossAxisAlignment.center,
+    spacing: 8.0,
+    runSpacing: 4.0,
+    children: [
+      TextFormField(
+        maxLength: 20,
+        decoration: const InputDecoration(
+          icon: Icon(null),
+          labelText: 'Username',
+          labelStyle: TextStyle(
+            color: Colors.deepPurpleAccent,
+          ),
+          // suffixIcon: Icon(Icons.remove_red_eye_sharp),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurpleAccent)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.deepPurpleAccent),
           ),
         ),
-        TextFormField(
-          maxLength: 20,
-          decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Password',
-            labelStyle: TextStyle(
-              color: Colors.deepPurpleAccent,
-            ),
-            // helperText: 'Helper text',
-            suffixIcon: Icon(Icons.remove_red_eye_outlined),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.deepPurpleAccent),
-            ),
+      ),
+      TextFormField(
+        maxLength: 20,
+        decoration: const InputDecoration(
+          icon: Icon(null),
+          labelText: 'Password',
+          labelStyle: TextStyle(
+            color: Colors.deepPurpleAccent,
+          ),
+          // helperText: 'Helper text',
+          suffixIcon: Icon(Icons.remove_red_eye_outlined),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurpleAccent)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.deepPurpleAccent),
           ),
         ),
-        TextFormField(
-          maxLength: 20,
-          decoration: const InputDecoration(
-            icon: Icon(null),
-            labelText: 'Repeat your Password',
-            labelStyle: TextStyle(
-              color: Colors.deepPurpleAccent,
-            ),
-            // helperText: 'Helper text',
-            suffixIcon: Icon(Icons.remove_red_eye_outlined),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.deepPurpleAccent)),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.deepPurpleAccent),
-            ),
+      ),
+      TextFormField(
+        maxLength: 20,
+        decoration: const InputDecoration(
+          icon: Icon(null),
+          labelText: 'Repeat your Password',
+          labelStyle: TextStyle(
+            color: Colors.deepPurpleAccent,
+          ),
+          // helperText: 'Helper text',
+          suffixIcon: Icon(Icons.remove_red_eye_outlined),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurpleAccent)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.deepPurpleAccent),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Remember my password"),
-            CheckboxThing(),
-          ],
-        ),
-        Center(
-          // padding: const EdgeInsets.all(48.0),
-          child: Builder(builder: (context) {
-            return ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/productsoverview');
-                // Add your onPressed code here!
-              },
-              child: const Text('SIGN UP'),
-              // label: const Text('log in'),
-              // icon: Icon(Icons.login_sharp,
-              //     color: Colors.deepPurpleAccent, size: size2),
-              style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
-            );
-          }),
-        ),
-      ],
-    );
-  }
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Remember my password"),
+          CheckboxThing(),
+        ],
+      ),
+      Center(
+        // padding: const EdgeInsets.all(48.0),
+        child: Builder(builder: (context) {
+          return ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/productsoverview');
+              // Add your onPressed code here!
+            },
+            child: const Text('SIGN UP'),
+            // label: const Text('log in'),
+            // icon: Icon(Icons.login_sharp,
+            //     color: Colors.deepPurpleAccent, size: size2),
+            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+          );
+        }),
+      ),
+    ],
+  );
 }
