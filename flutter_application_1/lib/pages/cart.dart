@@ -24,58 +24,120 @@ class MyCartWidget extends StatefulWidget {
 }
 
 class _MyCartWidgetState extends State<MyCartWidget> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: cart',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: cart',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: cart',
-      style: optionStyle,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(8.0),
+      itemExtent: 106.0,
+      children: <Widget>[
+        Card(
+          child: CustomListItem(
+            user:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+            viewCount: 367,
+            thumbnail: Image(
+              image: AssetImage('../assets/glass2.jpg'),
+              fit: BoxFit.cover,
+            ),
+            title: 'The Classic is Fantastic',
+          ),
+        ),
+        Card(
+          child: CustomListItem(
+            user:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+            viewCount: 125,
+            thumbnail: Image(
+                image: AssetImage('../assets/glass1.jpg'), fit: BoxFit.cover),
+            title: 'The Classic is Fantastic',
+          ),
+        ),
+      ],
+    );
   }
+}
+
+class CustomListItem extends StatelessWidget {
+  const CustomListItem({
+    Key? key,
+    required this.thumbnail,
+    required this.title,
+    required this.user,
+    required this.viewCount,
+  }) : super(key: key);
+
+  final Widget thumbnail;
+  final String title;
+  final String user;
+  final int viewCount;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('BottomNavigationBar Sample'),
-      // ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepPurpleAccent,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_rounded),
-            label: 'Menu',
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Expanded(
+            flex: 2,
+            child: thumbnail,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+          Expanded(
+            flex: 3,
+            child: _VideoDescription(
+              title: title,
+              user: user,
+              viewCount: viewCount,
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
+          const Icon(
+            Icons.remove_circle,
+            color: Color.fromARGB(255, 133, 39, 33),
+            size: 16.0,
           ),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
-        onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+class _VideoDescription extends StatelessWidget {
+  const _VideoDescription({
+    Key? key,
+    required this.title,
+    required this.user,
+    required this.viewCount,
+  }) : super(key: key);
+
+  final String title;
+  final String user;
+  final int viewCount;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            title,
+            style: const TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 14.0,
+            ),
+          ),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 2.0)),
+          Text(
+            user,
+            style: const TextStyle(fontSize: 10.0),
+          ),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
+          Text(
+            '$viewCount views',
+            style: const TextStyle(fontSize: 10.0),
+          ),
+        ],
       ),
     );
   }
