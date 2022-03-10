@@ -28,7 +28,7 @@ class _ProductsOverviewState extends State<ProductsOverview> {
 }
 
 class _MyNavBarWidgetState extends State<MyNavBarWidget> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -168,8 +168,6 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
     );
   }
 }
-
-// #enddocregion RWS-var
 
 class MyNavBarWidget extends StatefulWidget {
   const MyNavBarWidget({Key? key}) : super(key: key);
