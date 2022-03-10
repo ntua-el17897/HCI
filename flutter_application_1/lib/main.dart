@@ -30,66 +30,67 @@ class MyApp extends StatelessWidget {
         '/productsoverview': (context) => ProductsOverview(),
         '/singleproduct': (context) => SingleProduct(),
       },
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('../assets/kourtina.jpg'), fit: BoxFit.fill),
-          ),
-          child: Container(
-            child: SizedBox.expand(
-              child: Image(image: AssetImage('../assets/cloudglasses.png')),
-            ),
-          ),
-          padding: EdgeInsets.all(20),
-        ),
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Builder(builder: (context) {
-              //   return FloatingActionButton.extended(
-              //     onPressed: () {
-              //       Navigator.pushNamed(context, '/login');
-              //       // Add your onPressed code here!
-              //     },
-              // label: const Text('log in'),
-              // icon: const Icon(Icons.login),
-              // backgroundColor: Color.fromARGB(255, 0, 0, 0),
-              //   );
-              return ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/login');
-                  // Respond to button press
-                },
-                child: Text('LOG IN'),
-                style:
-                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
-              );
-            }),
-            Builder(builder: (context) {
-              return ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/register');
-                  // Respond to button press
-                },
-                child: Text('SIGN UP'),
-                style:
-                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
-              );
-              // return FloatingActionButton.extended(
-              //   onPressed: () {
-              //     Navigator.pushNamed(context, '/register');
-              //     // Add your onPressed code here!
-              //   },
-              //   label: const Text('sign up'),
-              //   icon: const Icon(Icons.add),
-              //   backgroundColor: Color.fromARGB(255, 100, 100, 100),
-              // );
-            }),
-          ],
-        ),
-      ),
+      home: LoginRegister(),
     );
   }
+}
+
+// ignore: non_constant_identifier_names
+Scaffold LoginRegister() {
+  return Scaffold(
+    body: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('../assets/kourtina.jpg'), fit: BoxFit.fill),
+      ),
+      child: SizedBox.expand(
+        child: Image(image: AssetImage('../assets/cloudglasses.png')),
+      ),
+      padding: EdgeInsets.all(20),
+    ),
+    floatingActionButton: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Builder(builder: (context) {
+          //   return FloatingActionButton.extended(
+          //     onPressed: () {
+          //       Navigator.pushNamed(context, '/login');
+          //       // Add your onPressed code here!
+          //     },
+          // label: const Text('log in'),
+          // icon: const Icon(Icons.login),
+          // backgroundColor: Color.fromARGB(255, 0, 0, 0),
+          //   );
+          return ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/login');
+              // Respond to button press
+            },
+            child: Text('LOG IN'),
+            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+          );
+        }),
+        Builder(builder: (context) {
+          return ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/register');
+              // Respond to button press
+            },
+            child: Text('SIGN UP'),
+            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+          );
+          // return FloatingActionButton.extended(
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, '/register');
+          //     // Add your onPressed code here!
+          //   },
+          //   label: const Text('sign up'),
+          //   icon: const Icon(Icons.add),
+          //   backgroundColor: Color.fromARGB(255, 100, 100, 100),
+          // );
+        }),
+      ],
+    ),
+  );
 }
