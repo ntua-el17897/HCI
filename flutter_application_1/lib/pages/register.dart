@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class CheckboxThing extends StatefulWidget {
@@ -48,15 +46,15 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      body: const Padding(
+        padding: EdgeInsets.all(20.0),
         child: Align(
           alignment: Alignment(0.20, -0.95),
           child: Image(image: AssetImage('../assets/cloudglasses.png')),
         ),
       ),
       floatingActionButton:
-          Align(alignment: Alignment(0.5, -0.4), child: RegisterMain()),
+          Align(alignment: const Alignment(0.5, -0.4), child: RegisterMain()),
     );
   }
 }
@@ -121,7 +119,7 @@ Wrap RegisterMain() {
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Text("Remember my password"),
           CheckboxThing(),
         ],
