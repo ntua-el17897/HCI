@@ -15,7 +15,9 @@ class _SingleProductState extends State<SingleProduct> {
           // padding: const EdgeInsets.all(20.0),
           children: [
             Stack(children: const [
-              Image(image: AssetImage('../assets/glass1.jpg')),
+              Hero(
+                  tag: "image1",
+                  child: Image(image: AssetImage('../assets/glass1.jpg'))),
               Padding(
                   padding: EdgeInsets.all(50),
                   child: Image(image: AssetImage('../assets/cloudglasses.png')))
