@@ -28,7 +28,9 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/register': (context) => Register(),
         '/productsoverview': (context) => ProductsOverview(),
-        '/singleproduct': (context) => SingleProduct(),
+        '/singleproduct1': (context) => SingleProduct1(),
+        '/singleproduct2': (context) => SingleProduct2(),
+        '/singleproduct3': (context) => SingleProduct3(),
       },
       home: LoginRegister(),
     );

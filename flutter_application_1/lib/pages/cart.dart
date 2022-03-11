@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/singleProduct.dart';
 
 class Cart extends StatefulWidget {
   @override
@@ -29,95 +30,71 @@ class _MyCartWidgetState extends State<MyCartWidget> {
     return ListView(
       padding: const EdgeInsets.all(8.0),
       itemExtent: 106.0,
+
+      // Respond to button press
+
       children: <Widget>[
         Hero(
           tag: "image1",
-          child: Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 367,
-              thumbnail: Image(
-                image: AssetImage('../assets/glass1.jpg'),
-                fit: BoxFit.cover,
+          child: ElevatedButton(
+            child: const Card(
+              child: CustomListItem(
+                user:
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                viewCount: 367,
+                thumbnail: Image(
+                  image: AssetImage('../assets/glass1.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                title: 'The Classic is Fantastic',
               ),
-              title: 'The Classic is Fantastic',
             ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => SingleProduct1()));
+            },
           ),
         ),
         Hero(
-          tag: "image1",
-          child: Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 367,
-              thumbnail: Image(
-                image: AssetImage('../assets/glass2.jpg'),
-                fit: BoxFit.cover,
+          tag: "image2",
+          child: ElevatedButton(
+            child: const Card(
+              child: CustomListItem(
+                user:
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                viewCount: 367,
+                thumbnail: Image(
+                  image: AssetImage('../assets/glass2.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                title: 'The Classic is Fantastic',
               ),
-              title: 'The Classic is Fantastic',
             ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => SingleProduct2()));
+            },
           ),
         ),
         Hero(
-          tag: "image1",
-          child: Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 367,
-              thumbnail: Image(
-                image: AssetImage('../assets/glass2.jpg'),
-                fit: BoxFit.cover,
+          tag: "image3",
+          child: ElevatedButton(
+            child: const Card(
+              child: CustomListItem(
+                user:
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                viewCount: 367,
+                thumbnail: Image(
+                  image: AssetImage('../assets/glass3.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                title: 'The Classic is Fantastic',
               ),
-              title: 'The Classic is Fantastic',
             ),
-          ),
-        ),
-        Hero(
-          tag: "image1",
-          child: Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 367,
-              thumbnail: Image(
-                image: AssetImage('../assets/glass1.jpg'),
-                fit: BoxFit.cover,
-              ),
-              title: 'The Classic is Fantastic',
-            ),
-          ),
-        ),
-        Hero(
-          tag: "image1",
-          child: Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 367,
-              thumbnail: Image(
-                image: AssetImage('../assets/glass2.jpg'),
-                fit: BoxFit.cover,
-              ),
-              title: 'The Classic is Fantastic',
-            ),
-          ),
-        ),
-        Hero(
-          tag: "image1",
-          child: Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 367,
-              thumbnail: Image(
-                image: AssetImage('../assets/glass1.jpg'),
-                fit: BoxFit.cover,
-              ),
-              title: 'The Classic is Fantastic',
-            ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => SingleProduct3()));
+            },
           ),
         ),
       ],
