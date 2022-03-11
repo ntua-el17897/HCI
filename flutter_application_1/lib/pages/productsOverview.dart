@@ -5,6 +5,9 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 
 import 'package:english_words/english_words.dart';
+import 'package:flutter_application_1/pages/login.dart';
+import '../main.dart';
+import 'cameraScreen.dart';
 import 'cart.dart';
 import 'productsHome.dart';
 
@@ -103,7 +106,8 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               style: TextStyle(fontSize: 18.0),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/productsoverview');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => ProductsOverview()));
             },
           ),
         ),
@@ -118,7 +122,8 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               style: TextStyle(fontSize: 18.0),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/cart');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => ProductsOverview()));
             },
           ),
         ),
@@ -145,7 +150,8 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               style: TextStyle(fontSize: 18.0),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/camerascreen');
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => CameraScreen()));
             },
           ),
         ),
@@ -160,7 +166,8 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
               style: TextStyle(fontSize: 18.0),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/login');
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => MyApp()));
             },
           ),
         ),
