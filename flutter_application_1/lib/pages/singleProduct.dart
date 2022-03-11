@@ -31,6 +31,9 @@ class _SingleProductState extends State<SingleProduct> {
     );
   }
 
+//////////////////////////
+
+////////////////////////////
   Widget titleSection = const Padding(
     padding: EdgeInsets.all(32),
     child: Text(

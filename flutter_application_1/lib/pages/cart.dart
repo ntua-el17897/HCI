@@ -30,26 +30,94 @@ class _MyCartWidgetState extends State<MyCartWidget> {
       padding: const EdgeInsets.all(8.0),
       itemExtent: 106.0,
       children: <Widget>[
-        Card(
-          child: CustomListItem(
-            user:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-            viewCount: 367,
-            thumbnail: Image(
-              image: AssetImage('../assets/glass2.jpg'),
-              fit: BoxFit.cover,
+        Hero(
+          tag: "image1",
+          child: Card(
+            child: CustomListItem(
+              user:
+                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+              viewCount: 367,
+              thumbnail: Image(
+                image: AssetImage('../assets/glass1.jpg'),
+                fit: BoxFit.cover,
+              ),
+              title: 'The Classic is Fantastic',
             ),
-            title: 'The Classic is Fantastic',
           ),
         ),
-        Card(
-          child: CustomListItem(
-            user:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-            viewCount: 125,
-            thumbnail: Image(
-                image: AssetImage('../assets/glass1.jpg'), fit: BoxFit.cover),
-            title: 'The Classic is Fantastic',
+        Hero(
+          tag: "image1",
+          child: Card(
+            child: CustomListItem(
+              user:
+                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+              viewCount: 367,
+              thumbnail: Image(
+                image: AssetImage('../assets/glass2.jpg'),
+                fit: BoxFit.cover,
+              ),
+              title: 'The Classic is Fantastic',
+            ),
+          ),
+        ),
+        Hero(
+          tag: "image1",
+          child: Card(
+            child: CustomListItem(
+              user:
+                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+              viewCount: 367,
+              thumbnail: Image(
+                image: AssetImage('../assets/glass2.jpg'),
+                fit: BoxFit.cover,
+              ),
+              title: 'The Classic is Fantastic',
+            ),
+          ),
+        ),
+        Hero(
+          tag: "image1",
+          child: Card(
+            child: CustomListItem(
+              user:
+                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+              viewCount: 367,
+              thumbnail: Image(
+                image: AssetImage('../assets/glass1.jpg'),
+                fit: BoxFit.cover,
+              ),
+              title: 'The Classic is Fantastic',
+            ),
+          ),
+        ),
+        Hero(
+          tag: "image1",
+          child: Card(
+            child: CustomListItem(
+              user:
+                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+              viewCount: 367,
+              thumbnail: Image(
+                image: AssetImage('../assets/glass2.jpg'),
+                fit: BoxFit.cover,
+              ),
+              title: 'The Classic is Fantastic',
+            ),
+          ),
+        ),
+        Hero(
+          tag: "image1",
+          child: Card(
+            child: CustomListItem(
+              user:
+                  'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+              viewCount: 367,
+              thumbnail: Image(
+                image: AssetImage('../assets/glass1.jpg'),
+                fit: BoxFit.cover,
+              ),
+              title: 'The Classic is Fantastic',
+            ),
           ),
         ),
       ],

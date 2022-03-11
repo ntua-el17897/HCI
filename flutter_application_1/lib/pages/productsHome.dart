@@ -32,14 +32,49 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
               ),
             ),
           ),
-          Card(
-            child: CustomListItem(
-              user:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-              viewCount: 125,
-              thumbnail: Image(
-                  image: AssetImage('../assets/glass2.jpg'), fit: BoxFit.cover),
-              title: 'The Classic is Fantastic',
+          Hero(
+            tag: "image1",
+            child: Card(
+              child: CustomListItem(
+                user:
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                viewCount: 367,
+                thumbnail: Image(
+                  image: AssetImage('../assets/glass1.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                title: 'The Classic is Fantastic',
+              ),
+            ),
+          ),
+          Hero(
+            tag: "image1",
+            child: Card(
+              child: CustomListItem(
+                user:
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                viewCount: 367,
+                thumbnail: Image(
+                  image: AssetImage('../assets/glass1.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                title: 'The Classic is Fantastic',
+              ),
+            ),
+          ),
+          Hero(
+            tag: "image1",
+            child: Card(
+              child: CustomListItem(
+                user:
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                viewCount: 367,
+                thumbnail: Image(
+                  image: AssetImage('../assets/glass1.jpg'),
+                  fit: BoxFit.cover,
+                ),
+                title: 'The Classic is Fantastic',
+              ),
             ),
           ),
         ],
