@@ -22,7 +22,7 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
             child: Card(
               child: CustomListItem(
                 user:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
                 viewCount: 367,
                 thumbnail: Image(
                   image: AssetImage('../assets/glass1.jpg'),
