@@ -3,6 +3,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/singleProduct.dart';
 
 class MyHomeWidget extends StatefulWidget {
   const MyHomeWidget({Key? key}) : super(key: key);
@@ -16,65 +17,68 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: const <Widget>[
+        children: <Widget>[
           Hero(
             tag: "image1",
-            child: Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass1.jpg'),
-                  fit: BoxFit.cover,
+            child: ElevatedButton(
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass1.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
                 ),
-                title: 'The Classic is Fantastic',
               ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct1()));
+              },
             ),
           ),
           Hero(
-            tag: "image1",
-            child: Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass1.jpg'),
-                  fit: BoxFit.cover,
+            tag: "image2",
+            child: ElevatedButton(
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
                 ),
-                title: 'The Classic is Fantastic',
               ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct2()));
+              },
             ),
           ),
           Hero(
-            tag: "image1",
-            child: Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass1.jpg'),
-                  fit: BoxFit.cover,
+            tag: "image3",
+            child: ElevatedButton(
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass3.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
                 ),
-                title: 'The Classic is Fantastic',
               ),
-            ),
-          ),
-          Hero(
-            tag: "image1",
-            child: Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass1.jpg'),
-                  fit: BoxFit.cover,
-                ),
-                title: 'The Classic is Fantastic',
-              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct3()));
+              },
             ),
           ),
         ],
