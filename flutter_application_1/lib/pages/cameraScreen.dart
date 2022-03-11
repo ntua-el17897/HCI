@@ -1,10 +1,6 @@
-// ignore_for_file: file_names
-import 'dart:async';
-import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:flutter/rendering.dart' show ViewportOffset;
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
 class CameraScreen extends StatefulWidget {
