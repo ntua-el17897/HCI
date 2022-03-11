@@ -20,7 +20,7 @@ class _CameraScreenState extends State<CameraScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0x44000000),
-        title: Text("Choose Filter Color for your cloudglasses"),
+        title: Text("Choose filter color for your cloudglasses"),
       ),
       body: ExampleInstagramFilterSelection(),
     );
