@@ -20,20 +20,34 @@ class _SingleProduct1State extends State<SingleProduct1> {
           // padding: const EdgeInsets.all(20.0),
           // child: Column(
           children: [
-            FittedBox(
-                fit: BoxFit.fill,
-                child: Image(image: AssetImage('../assets/glass1.jpg'))),
-            // Stack(children: const [
-            //   Padding(
-            //       padding: EdgeInsets.all(50),
-            //       child: Image(image: AssetImage('../assets/cloudglasses.png')))
-            // ]),
+            SizedBox(
+              height: 200,
+              child:
+                  // Image(
+                  //   image: AssetImage('../assets/glass1.jpg'),
+                  //   fit: BoxFit.fill,
+                  // ),
+                  Stack(fit: StackFit.expand, children: const [
+                Hero(
+                    // height: 200,
+                    tag: "image2",
+                    child: Image(
+                      image: AssetImage('../assets/glass1.jpg'),
+                      fit: BoxFit.fitWidth,
+                    )),
+                Padding(
+                    padding: EdgeInsets.all(50),
+                    child:
+                        Image(image: AssetImage('../assets/cloudglasses.png')))
+              ]),
+            ),
 
             titleSection,
+            // buttonSection2,
             buttonSection,
-            //buttonSection2,
             textSection,
           ]),
+      // floatingActionButton: buttonSection,
       // )
     );
   }
@@ -120,6 +134,104 @@ class _SingleProduct1State extends State<SingleProduct1> {
             'unchanged. It was popularised in the 1960s with the'
             'release of Letraset sheets containing Lorem Ipsum'
             'passages, and more recently with desktop publishing'
+            'software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of '
+            'the printing and typesetting industry'
+            'Lorem Ipsum has been the industrys standard'
+            'dummy text ever since the 1500s, when an unknown'
+            'printer took a galley of type and scrambled it to'
+            'make a type specimen book. It has survived not'
+            'only five centuries, but also the leap into '
+            'electronic typesetting, remaining essentially '
+            'unchanged. It was popularised in the 1960s with'
+            'the release of Letraset sheets containing Lorem'
+            'Ipsum passages, and more recently with desktop'
+            'publishing software like Aldus PageMaker'
+            'including versions of Lorem Ipsum.'
+            'Lorem Ipsum is simply dummy text of the printing'
+            'and typesetting industry. Lorem Ipsum has been the'
+            'industrys standard dummy text ever since the 1500s,'
+            'when an unknown printer took a galley of type and'
+            'scrambled it to make a type specimen book. It has'
+            'survived not only five centuries, but also the leap'
+            'into electronic typesetting, remaining essentially'
+            'unchanged. It was popularised in the 1960s with the'
+            'release of Letraset sheets containing Lorem Ipsum'
+            'passages, and more recently with desktop publishing'
+            'software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of '
+            'the printing and typesetting industry'
+            'Lorem Ipsum has been the industrys standard'
+            'dummy text ever since the 1500s, when an unknown'
+            'printer took a galley of type and scrambled it to'
+            'make a type specimen book. It has survived not'
+            'only five centuries, but also the leap into '
+            'electronic typesetting, remaining essentially '
+            'unchanged. It was popularised in the 1960s with'
+            'the release of Letraset sheets containing Lorem'
+            'Ipsum passages, and more recently with desktop'
+            'publishing software like Aldus PageMaker'
+            'including versions of Lorem Ipsum.'
+            'Lorem Ipsum is simply dummy text of the printing'
+            'and typesetting industry. Lorem Ipsum has been the'
+            'industrys standard dummy text ever since the 1500s,'
+            'when an unknown printer took a galley of type and'
+            'scrambled it to make a type specimen book. It has'
+            'survived not only five centuries, but also the leap'
+            'into electronic typesetting, remaining essentially'
+            'unchanged. It was popularised in the 1960s with the'
+            'release of Letraset sheets containing Lorem Ipsum'
+            'passages, and more recently with desktop publishing'
+            'software like Aldus PageMaker including n the 1960s with the'
+            'release of Letraset sheets containing Lorem Ipsum'
+            'passages, and more recently with desktop publishing'
+            'software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of '
+            'the printing and typesetting industry'
+            'Lorem Ipsum has been the industrys standard'
+            'dummy text ever since the 1500s, when an unknown'
+            'printer took a galley of type and scrambled it to'
+            'make a type specimen book. It has survived not'
+            'only five centuries, but also the leap into '
+            'electronic typesetting, remaining essentially '
+            'unchanged. It was popularised in the 1960s with'
+            'the release of Letraset sheets containing Lorem'
+            'Ipsum passages, and more recently with desktop'
+            'publishing software like Aldus PageMaker'
+            'including versions of Lorem Ipsum.'
+            'Lorem Ipsum is simply dummy text of the printing'
+            'and typesetting industry. Lorem Ipsum has been the'
+            'industrys standard dummy text ever since the 1500s,'
+            'when an unknown printer took a galley of type and'
+            'scrambled it to make a type specimen book. It has'
+            'survived not only five centuries, but also the leap'
+            'into electronic typesetting, remaining essentially'
+            'unchanged. It was popularised in the 1960s with the'
+            'release of Letraset sheets containing Lorem Ipsum'
+            'passages, and more recently with desktop publishing'
+            'software like Aldus PageMaker including n the 1960s with the'
+            'release of Letraset sheets containing Lorem Ipsum'
+            'passages, and more recently with desktop publishing'
+            'software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of '
+            'the printing and typesetting industry'
+            'Lorem Ipsum has been the industrys standard'
+            'dummy text ever since the 1500s, when an unknown'
+            'printer took a galley of type and scrambled it to'
+            'make a type specimen book. It has survived not'
+            'only five centuries, but also the leap into '
+            'electronic typesetting, remaining essentially '
+            'unchanged. It was popularised in the 1960s with'
+            'the release of Letraset sheets containing Lorem'
+            'Ipsum passages, and more recently with desktop'
+            'publishing software like Aldus PageMaker'
+            'including versions of Lorem Ipsum.'
+            'Lorem Ipsum is simply dummy text of the printing'
+            'and typesetting industry. Lorem Ipsum has been the'
+            'industrys standard dummy text ever since the 1500s,'
+            'when an unknown printer took a galley of type and'
+            'scrambled it to make a type specimen book. It has'
+            'survived not only five centuries, but also the leap'
+            'into electronic typesetting, remaining essentially'
+            'unchanged. It was popularised in the 1960s with the'
+            'release of Letraset sheets containing Lorem Ipsum'
+            'passages, and more recently with desktop publishing'
             'software like Aldus PageMaker including versions of Lorem Ipsum.'),
       ),
     ),
@@ -142,14 +254,27 @@ class _SingleProduct2State extends State<SingleProduct2> {
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
-            Stack(children: const [
-              Hero(
-                  tag: "image2",
-                  child: Image(image: AssetImage('../assets/glass2.jpg'))),
-              Padding(
-                  padding: EdgeInsets.all(50),
-                  child: Image(image: AssetImage('../assets/cloudglasses.png')))
-            ]),
+            SizedBox(
+              height: 200,
+              child:
+                  // Image(
+                  //   image: AssetImage('../assets/glass1.jpg'),
+                  //   fit: BoxFit.fill,
+                  // ),
+                  Stack(fit: StackFit.expand, children: const [
+                Hero(
+                    // height: 200,
+                    tag: "image2",
+                    child: Image(
+                      image: AssetImage('../assets/glass2.jpg'),
+                      fit: BoxFit.fitWidth,
+                    )),
+                Padding(
+                    padding: EdgeInsets.all(50),
+                    child:
+                        Image(image: AssetImage('../assets/cloudglasses.png')))
+              ]),
+            ),
 
             titleSection,
             buttonSection,
@@ -261,14 +386,27 @@ class _SingleProduct3State extends State<SingleProduct3> {
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
-            Stack(children: const [
-              Hero(
-                  tag: "image3",
-                  child: Image(image: AssetImage('../assets/glass3.jpg'))),
-              Padding(
-                  padding: EdgeInsets.all(50),
-                  child: Image(image: AssetImage('../assets/cloudglasses.png')))
-            ]),
+            SizedBox(
+              height: 200,
+              child:
+                  // Image(
+                  //   image: AssetImage('../assets/glass1.jpg'),
+                  //   fit: BoxFit.fill,
+                  // ),
+                  Stack(fit: StackFit.expand, children: const [
+                Hero(
+                    // height: 200,
+                    tag: "image2",
+                    child: Image(
+                      image: AssetImage('../assets/glass3.jpg'),
+                      fit: BoxFit.fitWidth,
+                    )),
+                Padding(
+                    padding: EdgeInsets.all(50),
+                    child:
+                        Image(image: AssetImage('../assets/cloudglasses.png')))
+              ]),
+            ),
 
             titleSection,
             buttonSection,

@@ -29,7 +29,7 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
                   viewCount: 367,
                   thumbnail: Image(
                     image: AssetImage('../assets/glass1.jpg'),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fitWidth,
                   ),
                   title: 'The Classic is Fantastic',
                 ),
