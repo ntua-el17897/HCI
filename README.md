@@ -9,3 +9,5 @@
 7.  productOverview: Δεν κάνουν fill οι εικόνες στο preview και δεν έχουν προσθετεί τα icons για το heart και bell όπως στο figma. Επίσης λείπουν τα κουμπιά add cart και more info. Η λειτουργικότητα του more info έχει μεταφερθεί σε όλοκληρο το tile
 8.  cart: αντίστοιχα θέματα με το product overview με απουσία κουμπιών και icons. 
 9.  checkout: δεν έχει bottom nav bar αλλά appbar με την οποία γυρνάει στην προηγούμενη εικόνα. Το finish δεν είχε λειτουργία στο figma αλλά εδώ κάνει την ίδια με το abort και μας γυρνάει στην προηγούμενη σελίδα.
+
+https://github.com/iragkousis/HCI
