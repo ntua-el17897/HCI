@@ -14,7 +14,7 @@ class _LoginState extends State<Login> {
         padding: const EdgeInsets.all(20.0),
         child: Align(
           alignment: Alignment(0.20, -0.95),
-          child: Image(image: AssetImage('../assets/cloudglasses.png')),
+          child: Image(image: AssetImage('assets/cloudglasses.png')),
         ),
       ),
       floatingActionButton:
