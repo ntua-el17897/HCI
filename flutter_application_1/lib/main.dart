@@ -43,7 +43,7 @@ Scaffold LoginRegister() {
     body: Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('../assets/kourtina.jpg'), fit: BoxFit.fill),
+            image: AssetImage('assets/kourtina.jpg'), fit: BoxFit.fill),
       ),
       child: SizedBox.expand(
         child: Image(image: AssetImage('../assets/cloudglasses.png')),
