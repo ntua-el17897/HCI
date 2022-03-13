@@ -10,8 +10,15 @@ class _SingleProduct1State extends State<SingleProduct1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        backgroundColor: Color(0x44000000),
+        title: Text("Classic is fantastic"),
+      ),
+
       body: Column(
           // padding: const EdgeInsets.all(20.0),
+         // child: Column(
           children: [
             Stack(children: const [
               Hero(
@@ -27,6 +34,7 @@ class _SingleProduct1State extends State<SingleProduct1> {
             //buttonSection2,
             textSection,
           ]),
+     // )
     );
   }
 
@@ -127,6 +135,11 @@ class _SingleProduct2State extends State<SingleProduct2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0x44000000),
+        title: Text("Classic is fantastic"),
+      ),
+
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
@@ -242,6 +255,11 @@ class _SingleProduct3State extends State<SingleProduct3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0x44000000),
+        title: Text("Classic is fantastic"),
+      ),
+
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
