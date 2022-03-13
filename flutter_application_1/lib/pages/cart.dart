@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/singleProduct.dart';
+// import 'dismissible_widget.dart';
 
 class Cart extends StatefulWidget {
   @override
@@ -25,77 +26,113 @@ class MyCartWidget extends StatefulWidget {
 class _MyCartWidgetState extends State<MyCartWidget> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8.0),
-      itemExtent: 106.0,
+    return Scaffold(
+      body: ListView(
+        padding: const EdgeInsets.all(8.0),
+        itemExtent: 106.0,
 
-      // Respond to button press
+        // Respond to button press
 
-      children: <Widget>[
-        Hero(
-          tag: "image1",
-          child: ElevatedButton(
-            child: const Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass1.jpg'),
-                  fit: BoxFit.cover,
+        children: <Widget>[
+          Hero(
+            tag: "image1",
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass1.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
                 ),
-                title: 'The Classic is Fantastic',
               ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct1()));
+              },
             ),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => SingleProduct1()));
-            },
           ),
-        ),
-        Hero(
-          tag: "image2",
-          child: ElevatedButton(
-            child: const Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass2.jpg'),
-                  fit: BoxFit.cover,
+          Hero(
+            tag: "image2",
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
                 ),
-                title: 'The Classic is Fantastic',
               ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct2()));
+              },
             ),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => SingleProduct2()));
-            },
           ),
-        ),
-        Hero(
-          tag: "image3",
-          child: ElevatedButton(
-            child: const Card(
-              child: CustomListItem(
-                user:
-                    'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                viewCount: 367,
-                thumbnail: Image(
-                  image: AssetImage('../assets/glass3.jpg'),
-                  fit: BoxFit.cover,
+          Hero(
+            tag: "image3",
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass3.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
                 ),
-                title: 'The Classic is Fantastic',
               ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct3()));
+              },
             ),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => SingleProduct3()));
-            },
           ),
-        ),
-      ],
+        ],
+      ),
+      floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Builder(builder: (context) {
+              //   return FloatingActionButton.extended(
+              //     onPressed: () {
+              //       Navigator.pushNamed(context, '/login');
+              //       // Add your onPressed code here!
+              //     },
+              // label: const Text('log in'),
+              // icon: const Icon(Icons.login),
+              // backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              //   );
+              return ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                  // Respond to button press
+                },
+                child: Text('LOG IN'),
+                style:
+                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+              );
+            }),
+          ]),
     );
   }
 }

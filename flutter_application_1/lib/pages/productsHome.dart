@@ -19,6 +19,57 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
           Hero(
             tag: "image1",
             child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass1.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct1()));
+              },
+            ),
+          ),
+          Hero(
+            tag: "image1",
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
+              child: const Card(
+                child: CustomListItem(
+                  user:
+                      'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+                  viewCount: 367,
+                  thumbnail: Image(
+                    image: AssetImage('../assets/glass1.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  title: 'The Classic is Fantastic',
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SingleProduct1()));
+              },
+            ),
+          ),
+          Hero(
+            tag: "image1",
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
               child: const Card(
                 child: CustomListItem(
                   user:
@@ -40,6 +91,9 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
           Hero(
             tag: "image2",
             child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
               child: const Card(
                 child: CustomListItem(
                   user:
@@ -61,6 +115,9 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
           Hero(
             tag: "image3",
             child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white)),
               child: const Card(
                 child: CustomListItem(
                   user:
