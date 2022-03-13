@@ -9,17 +9,17 @@ import 'cart.dart';
 import 'productsHome.dart';
 
 class _ProductsOverviewState extends State<ProductsOverview> {
-  static const String _title = 'Flutter Code Sample';
+  // static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return MaterialApp(
-      title: _title,
+      // title: _title,/
       // ignore: prefer_const_constructors
       home: Builder(builder: (context) {
         return const MaterialApp(
-          title: 'Startup Name Generator',
+          title: 'cloudGlasses',
           home: MyNavBarWidget(),
         );
       }),

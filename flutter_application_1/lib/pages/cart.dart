@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/checkout.dart';
 import 'package:flutter_application_1/pages/singleProduct.dart';
 // import 'dismissible_widget.dart';
 
@@ -36,10 +37,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
         children: <Widget>[
           Hero(
             tag: "image1",
-            child: ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white)),
+            child: FlatButton(
               child: const Card(
                 child: CustomListItem(
                   user:
@@ -60,10 +58,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
           ),
           Hero(
             tag: "image2",
-            child: ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white)),
+            child: FlatButton(
               child: const Card(
                 child: CustomListItem(
                   user:
@@ -84,10 +79,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
           ),
           Hero(
             tag: "image3",
-            child: ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white)),
+            child: FlatButton(
               child: const Card(
                 child: CustomListItem(
                   user:
@@ -124,10 +116,11 @@ class _MyCartWidgetState extends State<MyCartWidget> {
               //   );
               return ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => Checkout()));
                   // Respond to button press
                 },
-                child: Text('LOG IN'),
+                child: Text('CHECKOUT'),
                 style:
                     ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
               );
@@ -214,7 +207,7 @@ class _VideoDescription extends StatelessWidget {
           ),
           const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
           Text(
-            '$viewCount views',
+            '$viewCount \$',
             style: const TextStyle(fontSize: 10.0),
           ),
         ],

@@ -12,29 +12,29 @@ class _SingleProduct1State extends State<SingleProduct1> {
     return Scaffold(
       //resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: Color(0x44000000),
+        backgroundColor: Colors.deepPurpleAccent,
         title: Text("Classic is fantastic"),
       ),
 
       body: Column(
           // padding: const EdgeInsets.all(20.0),
-         // child: Column(
+          // child: Column(
           children: [
-            Stack(children: const [
-              Hero(
-                  tag: "image1",
-                  child: Image(image: AssetImage('../assets/glass1.jpg'))),
-              Padding(
-                  padding: EdgeInsets.all(50),
-                  child: Image(image: AssetImage('../assets/cloudglasses.png')))
-            ]),
+            FittedBox(
+                fit: BoxFit.fill,
+                child: Image(image: AssetImage('../assets/glass1.jpg'))),
+            // Stack(children: const [
+            //   Padding(
+            //       padding: EdgeInsets.all(50),
+            //       child: Image(image: AssetImage('../assets/cloudglasses.png')))
+            // ]),
 
             titleSection,
             buttonSection,
             //buttonSection2,
             textSection,
           ]),
-     // )
+      // )
     );
   }
 
@@ -136,10 +136,9 @@ class _SingleProduct2State extends State<SingleProduct2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0x44000000),
+        backgroundColor: Colors.deepPurpleAccent,
         title: Text("Classic is fantastic"),
       ),
-
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
@@ -259,7 +258,6 @@ class _SingleProduct3State extends State<SingleProduct3> {
         backgroundColor: Color(0x44000000),
         title: Text("Classic is fantastic"),
       ),
-
       body: Column(
           // padding: const EdgeInsets.all(20.0),
           children: [
