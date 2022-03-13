@@ -44,7 +44,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                       'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
                   viewCount: 367,
                   thumbnail: Image(
-                    image: AssetImage('../assets/glass1.jpg'),
+                    image: AssetImage('assets/glass1.jpg'),
                     fit: BoxFit.cover,
                   ),
                   title: 'The Classic is Fantastic',
@@ -65,7 +65,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                       'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
                   viewCount: 367,
                   thumbnail: Image(
-                    image: AssetImage('../assets/glass2.jpg'),
+                    image: AssetImage('assets/glass2.jpg'),
                     fit: BoxFit.cover,
                   ),
                   title: 'The Classic is Fantastic',
@@ -86,7 +86,7 @@ class _MyCartWidgetState extends State<MyCartWidget> {
                       'Lorem ipsum fdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
                   viewCount: 367,
                   thumbnail: Image(
-                    image: AssetImage('../assets/glass3.jpg'),
+                    image: AssetImage('assets/glass3.jpg'),
                     fit: BoxFit.cover,
                   ),
                   title: 'The Classic is Fantastic',

@@ -75,14 +75,14 @@ class _ExampleInstagramFilterSelectionState
         final color = value as Color;
         return Stack(children: [
           Image.asset(
-            '../assets/pc.jpg',
+            'assets/pc.jpg',
             color: color.withOpacity(0.5),
             colorBlendMode: BlendMode.color,
             fit: BoxFit.cover,
           ),
           Center(
             child: Image.asset(
-              '../assets/arglass.png',
+              'assets/arglass.png',
               color: color.withOpacity(0.3),
               colorBlendMode: BlendMode.color,
               fit: BoxFit.cover,

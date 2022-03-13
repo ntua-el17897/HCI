@@ -24,7 +24,7 @@ class _SingleProduct1State extends State<SingleProduct1> {
               height: 200,
               child:
                   // Image(
-                  //   image: AssetImage('../assets/glass1.jpg'),
+                  //   image: AssetImage('assets/glass1.jpg'),
                   //   fit: BoxFit.fill,
                   // ),
                   Stack(fit: StackFit.expand, children: const [
@@ -32,13 +32,12 @@ class _SingleProduct1State extends State<SingleProduct1> {
                     // height: 200,
                     tag: "image2",
                     child: Image(
-                      image: AssetImage('../assets/glass1.jpg'),
+                      image: AssetImage('assets/glass1.jpg'),
                       fit: BoxFit.fitWidth,
                     )),
                 Padding(
                     padding: EdgeInsets.all(50),
-                    child:
-                        Image(image: AssetImage('../assets/cloudglasses.png')))
+                    child: Image(image: AssetImage('assets/cloudglasses.png')))
               ]),
             ),
 
@@ -258,7 +257,7 @@ class _SingleProduct2State extends State<SingleProduct2> {
               height: 200,
               child:
                   // Image(
-                  //   image: AssetImage('../assets/glass1.jpg'),
+                  //   image: AssetImage('assets/glass1.jpg'),
                   //   fit: BoxFit.fill,
                   // ),
                   Stack(fit: StackFit.expand, children: const [
@@ -266,13 +265,12 @@ class _SingleProduct2State extends State<SingleProduct2> {
                     // height: 200,
                     tag: "image2",
                     child: Image(
-                      image: AssetImage('../assets/glass2.jpg'),
+                      image: AssetImage('assets/glass2.jpg'),
                       fit: BoxFit.fitWidth,
                     )),
                 Padding(
                     padding: EdgeInsets.all(50),
-                    child:
-                        Image(image: AssetImage('../assets/cloudglasses.png')))
+                    child: Image(image: AssetImage('assets/cloudglasses.png')))
               ]),
             ),
 
@@ -390,7 +388,7 @@ class _SingleProduct3State extends State<SingleProduct3> {
               height: 200,
               child:
                   // Image(
-                  //   image: AssetImage('../assets/glass1.jpg'),
+                  //   image: AssetImage('assets/glass1.jpg'),
                   //   fit: BoxFit.fill,
                   // ),
                   Stack(fit: StackFit.expand, children: const [
@@ -398,13 +396,12 @@ class _SingleProduct3State extends State<SingleProduct3> {
                     // height: 200,
                     tag: "image2",
                     child: Image(
-                      image: AssetImage('../assets/glass3.jpg'),
+                      image: AssetImage('assets/glass3.jpg'),
                       fit: BoxFit.fitWidth,
                     )),
                 Padding(
                     padding: EdgeInsets.all(50),
-                    child:
-                        Image(image: AssetImage('../assets/cloudglasses.png')))
+                    child: Image(image: AssetImage('assets/cloudglasses.png')))
               ]),
             ),
 

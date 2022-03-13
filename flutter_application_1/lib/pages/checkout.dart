@@ -23,7 +23,7 @@ class _CheckoutState extends State<Checkout> {
           children: [
             Align(
               alignment: Alignment(0.20, -0.95),
-              child: Image(image: AssetImage('../assets/cloudglasses.png')),
+              child: Image(image: AssetImage('assets/cloudglasses.png')),
             ),
             TextFormField(
               maxLength: 20,

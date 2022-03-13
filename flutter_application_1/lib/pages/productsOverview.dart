@@ -36,7 +36,7 @@ class _MyMenuWidgetState extends State<MyMenuWidget> {
       children: <Widget>[
         Card(
           child: ListTile(
-            leading: Image(image: AssetImage('../assets/face.jpg')),
+            leading: Image(image: AssetImage('assets/face.jpg')),
             title: Text('User Useropoulos'),
             subtitle: Text('snailman@emailperson.com'),
             isThreeLine: true,

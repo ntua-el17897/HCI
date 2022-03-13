@@ -46,7 +46,7 @@ Scaffold LoginRegister() {
             image: AssetImage('assets/kourtina.jpg'), fit: BoxFit.fill),
       ),
       child: SizedBox.expand(
-        child: Image(image: AssetImage('../assets/cloudglasses.png')),
+        child: Image(image: AssetImage('assets/cloudglasses.png')),
       ),
       padding: EdgeInsets.all(20),
     ),
